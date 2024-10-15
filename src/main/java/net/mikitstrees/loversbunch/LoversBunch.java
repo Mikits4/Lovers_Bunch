@@ -5,11 +5,10 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.mikitstrees.loversbunch.block.ModBlocks;
 import net.mikitstrees.loversbunch.component.ModDataComponentTypes;
 import net.mikitstrees.loversbunch.entity.ModEntities;
-import net.mikitstrees.loversbunch.entity.custom.LovebirdEntity;
-
 import net.mikitstrees.loversbunch.item.ModItemGroups;
 import net.mikitstrees.loversbunch.item.ModItems;
 import net.mikitstrees.loversbunch.sound.ModSounds;
+import net.mikitstrees.loversbunch.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,10 +24,10 @@ public class LoversBunch implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+//		ModWorldGeneration.generateModWorldGeneration();
+
 		ModSounds.registerSounds();
 
 		ModDataComponentTypes.registerDataComponentTypes();
-
-		FabricDefaultAttributeRegistry.register(ModEntities.LOVEBIRD, LovebirdEntity.createLovebirdAttributes());
 	}
 }

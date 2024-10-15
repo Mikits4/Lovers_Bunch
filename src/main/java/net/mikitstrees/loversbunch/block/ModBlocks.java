@@ -15,18 +15,6 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
-    public static final Block HEARTSTONE_BLOCK = registerBlock("heartstone_block",
-            new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.LARGE_AMETHYST_BUD)));
-    public static final Block RAW_HEARTSTONE_BLOCK = registerBlock("raw_heartstone_block",
-            new Block(AbstractBlock.Settings.create().strength(3f).requiresTool()));
-
-    public static final Block HEARTSTONE_ORE = registerBlock("heartstone_garnet_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool()));
-    public static final Block HEARTSTONE_DEEPSLATE_ORE = registerBlock("heartstone_deepslate_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
-                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
-
     public static final Block BUTTERCUP = registerBlock("buttercup",
             new FlowerBlock(StatusEffects.OOZING, 4, Block.Settings.copy(Blocks.ALLIUM)));
     public static final Block POTTED_BUTTERCUP = registerBlockWithoutBlockItem("potted_buttercup",

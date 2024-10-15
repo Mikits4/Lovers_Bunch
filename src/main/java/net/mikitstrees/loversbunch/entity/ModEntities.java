@@ -1,6 +1,5 @@
 package net.mikitstrees.loversbunch.entity;
 
-
 import net.mikitstrees.loversbunch.LoversBunch;
 
 public class ModEntities {

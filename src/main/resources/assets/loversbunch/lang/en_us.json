@@ -1,8 +1,5 @@
 {
-  "itemGroup.heartsinharmony.hih_items": "HiH Items",
+  "itemGroup.loversbunch.lovers_bunch_items": "Lovers Bunch Items",
 
-  "item.heartsinharmony.lovebird_spawn_egg": "Lovebird Spawn Egg",
-
-  "item.mccourse.song_name_music_disc": "Song Name Music Disc",
-  "item.mccourse.song_name_music_disc.desc": "Mikits - Song Name (CC0)"
+  "block.loversbunch.Buttercup": "Buttercup"
 }

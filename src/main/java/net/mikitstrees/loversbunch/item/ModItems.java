@@ -12,20 +12,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item LOVEBIRD_SPAWN_EGG = registerItem("lovebird_spawn_egg",
-            new SpawnEggItem(ModEntities.LOVEBIRD, 0x465ae0, 0x545978, new Item.Settings()));
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(LoversBunch.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
         LoversBunch.LOGGER.info("Registering Mod Items for " + LoversBunch.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { //entries into the creative inventory, into ingredients tab?
-
-        });
     }
-
-
 }

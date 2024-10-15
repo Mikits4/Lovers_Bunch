@@ -28,15 +28,5 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.BUTTERCUP);
         addDrop(ModBlocks.POTTED_BUTTERCUP, pottedPlantDrops(ModBlocks.BUTTERCUP));
-
-        addDrop(ModBlocks.HEARTSTONE_ORE, multipleOreDrops(ModBlocks.HEARTSTONE_DEEPSLATE_ORE, ModItems.RAW_HEARTSTONE, 2, 5));
-        addDrop(ModBlocks.HEARTSTONE_DEEPSLATE_ORE, multipleOreDrops(ModBlocks.HEARTSTONE_DEEPSLATE_ORE, ModItems.RAW_HEARTSTONE, 2, 5));
-    }
-
-    public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-                ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
 }
